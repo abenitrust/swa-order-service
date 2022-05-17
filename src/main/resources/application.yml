@@ -11,6 +11,9 @@ spring:
     host: localhost
     port: 27010
     database: order
+    authentication-database: admin
+    username: root
+    password: testd
 
   config.import: configserver:http://localhost:8003
 

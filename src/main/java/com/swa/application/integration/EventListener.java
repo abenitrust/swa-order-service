@@ -12,6 +12,7 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -45,19 +46,30 @@ public class EventListener {
 
 	@KafkaListener(topics = "${event.topics.checked-out}")
 	public void receiveOrder(ShoppingCart cart) {
-		Customer customer = customerFeignClient.getCustomer(cart.getCustomerId());
 		Order order = new Order();
-		order.setCustomerID(cart.getCustomerId());
-		order.setCustomer(customer);
+		try {
+			Customer customer = customerFeignClient.getCustomer(cart.getCustomerID());
+			order.setCustomerID(customer.getCustomerId());
+			order.setCustomer(customer);
 
-		for(CartLine cl: cart.getCartLines()) {
-			OrderLine ol = new OrderLine();
-			modelMapper.map(cl, ol);
-			order.addOrderLine(ol);
+			for (CartLine cl : cart.getCartLines()) {
+				OrderLine ol = new OrderLine();
+				modelMapper.map(cl, ol);
+				order.addOrderLine(ol);
+			}
+
+			orderService.add(order);
+			log.info("Successfully saved order: " + order);
+
+
+		} catch (Exception e) {
+			log.error(
+					"Error occurred while placing an order " + order +
+							"\n" + e.getMessage()
+			);
+			// TODO:  better to revert the changes in Cart Service using saga pattern
+			return;
 		}
-
-		orderService.add(order);
-		log.info("Successfully saved order: " + order);
 
 		sendOrderPlacedMsg(order);
 		emailService.send("Order successfully placed");
@@ -69,13 +81,13 @@ public class EventListener {
 
 	@FeignClient("customer-service")
 	interface CustomerFeignClient {
-		@RequestMapping("/api/v1/customer/{customerId}")
+		@GetMapping("/api/v1/customers/{customerId}")
 		Customer getCustomer(@PathVariable String customerId);
 	}
 	
 	@FeignClient("product-service")
 	interface ProductFeignClient {
-		@RequestMapping("products/{productId}")
-		Customer getProduct(@PathVariable String productId);
+		@GetMapping("/api/v1/products/{productId}")
+		Product getProduct(@PathVariable String productId);
 	}
 }
