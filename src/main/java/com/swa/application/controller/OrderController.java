@@ -1,5 +1,7 @@
-package com.application.controller;
+package com.swa.application.controller;
 
+import com.swa.application.exception.CustomErrorType;
+import com.swa.application.service.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,10 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import com.application.domain.Order;
-import com.application.domain.Orders;
-import com.application.exception.CustomErrorType;
-import com.application.service.OrderService;
+import com.swa.application.domain.Order;
 
 @RestController
 @RequestMapping("/api/v1/orders")
@@ -31,7 +30,7 @@ public class OrderController {
 					new CustomErrorType("Order with number = " + orderNumber + " is not available"),
 					HttpStatus.NOT_FOUND);
 		}
-		return new ResponseEntity<Order>(order, HttpStatus.OK);
+		return new ResponseEntity<>(order, HttpStatus.OK);
 	}
 
 	@GetMapping("/customers/{customerID}")
@@ -44,23 +43,20 @@ public class OrderController {
 					new CustomErrorType("Order with customerID = " + customerID + " is not available"),
 					HttpStatus.NOT_FOUND);
 		}
-
-		Orders response = new Orders();
-		response.setOrders(orders);
-		return new ResponseEntity<Orders>(response, HttpStatus.OK);
+		return new ResponseEntity<>(orders, HttpStatus.OK);
 	}
 
-	@PostMapping
-	public ResponseEntity<?> addOrder(@RequestBody Order order) {
-		log.info("POST request for /orders with body: " + order);
-		orderService.add(order);
-		return new ResponseEntity<Order>(order, HttpStatus.OK);
-	}
+//	@PostMapping
+//	public ResponseEntity<?> addOrder(@RequestBody Order order) {
+//		log.info("POST request for /orders with body: " + order);
+//		orderService.add(order);
+//		return new ResponseEntity<Order>(order, HttpStatus.OK);
+//	}
 
 	@GetMapping
 	public ResponseEntity<?> getAllOrders() {
 		log.info("GET request for /orders");
-		Orders orders = new Orders(orderService.findAll());
-		return new ResponseEntity<Orders>(orders, HttpStatus.OK);
+		var orders = orderService.findAll();
+		return new ResponseEntity<>(orders, HttpStatus.OK);
 	}
 }

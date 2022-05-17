@@ -1,16 +1,14 @@
-package com.application.domain;
-
-import java.util.List;
+package com.swa.application.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString
-public class Orders {
-	List<Order> orders;
+public class Address {
+    private String street;
+    private String city;
+    private String zip;
 }

@@ -1,4 +1,4 @@
-package com.application.integration;
+package com.swa.application.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,8 +9,8 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class CartLine {
-    private String productNumber;
+public class OrderLine {
+    private Product product;
     private int quantity;
     private double price;
 }

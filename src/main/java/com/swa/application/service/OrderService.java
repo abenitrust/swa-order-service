@@ -1,12 +1,12 @@
-package com.application.service;
+package com.swa.application.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-import com.application.domain.Order;
-import com.application.repository.OrderRepository;
+import com.swa.application.domain.Order;
+import com.swa.application.repository.OrderRepository;
 
 @Service
 public class OrderService {

@@ -1,6 +1,5 @@
-package com.application.integration;
+package com.swa.application.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import java.util.List;
@@ -9,7 +8,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class ShoppingCartDto {
+public class ShoppingCart {
     private String shoppingCartNumber;
     private String customerId;
 	private List<CartLine> cartLines;

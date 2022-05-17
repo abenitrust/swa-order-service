@@ -1,4 +1,4 @@
-package com.application.domain;
+package com.swa.application.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -11,9 +11,7 @@ public class Customer {
     private String customerId;
     private String firstName;
     private String lastName;
-    private String street;
-    private String city;
-    private String zip;
     private String phone;
     private String email;
+    private Address address;
 }
