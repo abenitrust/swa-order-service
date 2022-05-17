@@ -9,7 +9,5 @@ import com.swa.application.domain.Order;
 
 @Repository
 public interface OrderRepository extends MongoRepository<Order, String> {
-    Order findByOrderNumber(String orderNumber);
-    List<Order> findAll();
     List<Order> findByCustomerID(String customerID);
 }

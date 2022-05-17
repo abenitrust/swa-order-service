@@ -1,5 +1,6 @@
 package com.swa.application.service;
 
+import com.swa.application.exception.DBException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,28 +14,52 @@ public class OrderService {
 	@Autowired
 	OrderRepository orderRepository;
 
-	public void add(Order order) {
-		orderRepository.save(order);
+	public void add(Order order) throws DBException {
+		try {
+			orderRepository.save(order);
+		} catch (Exception e) {
+			throw new DBException(e.getMessage());
+		}
 	}
 
-	public void update(Order order) {
-		orderRepository.save(order);
+	public void update(Order order) throws DBException {
+		try {
+			orderRepository.save(order);
+		} catch (Exception e) {
+			throw new DBException(e.getMessage());
+		}
 	}
 
-	public Order findByOrderNumber(String orderNumber) {
-		return orderRepository.findByOrderNumber(orderNumber);
+	public Order findById(String orderNumber) throws DBException {
+		return orderRepository.findById(orderNumber)
+				.orElseThrow(() -> new DBException("Order with order number " + orderNumber + " not found!"));
 	}
 
-	public List<Order> findByCustomerID(String customerID) {
-		return orderRepository.findByCustomerID(customerID);
+	public List<Order> findAll()  throws DBException{
+		try {
+			return orderRepository.findAll();
+		} catch (Exception e) {
+			throw new DBException(e.getMessage());
+		}
 	}
 
-	public void delete(String productNumber) {
-		Order contact = orderRepository.findByOrderNumber(productNumber);
-		orderRepository.delete(contact);
+	public void delete(String orderNumber) throws DBException{
+		try {
+			var order = orderRepository.findById(orderNumber).orElseThrow(
+					() -> new DBException("Order by number " + orderNumber + " not found!")
+			);
+			orderRepository.delete(order);
+		} catch (Exception e) {
+			throw new DBException(e.getMessage());
+		}
 	}
 
-	public List<Order> findAll() {
-		return orderRepository.findAll();
+	public List<Order> findByCustomerID(String customerID) throws DBException {
+		try {
+			return orderRepository.findByCustomerID(customerID);
+		} catch (Exception e) {
+			throw new DBException(e.getMessage());
+		}
 	}
+
 }
