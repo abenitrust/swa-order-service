@@ -20,6 +20,7 @@ public class Order {
 	private String customerID;
 	private Customer customer;
 	private List<OrderLine> orderLines;
+	private OrderStatus orderStatus;
 
 	public void addOrderLine(OrderLine ol) {
 		if(orderLines == null) {

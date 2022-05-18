@@ -1,0 +1,265 @@
+2022-05-18 00:15:37,742 INFO org.hibernate.validator.internal.util.Version [background-preinit] HV000001: Hibernate Validator 6.1.7.Final
+2022-05-18 00:15:38,545 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Fetching config from server at : http://localhost:8003
+2022-05-18 00:15:39,482 INFO org.springframework.cloud.config.client.ConfigServicePropertySourceLocator [main] Located environment: name=order-service, profiles=[default], label=null, version=6beebd0254f32a276770508abbeae0daef39cce7, state=null
+2022-05-18 00:15:39,485 INFO org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration [main] Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-https://github.com/abenitrust/swa_config/order-service.yml'}]
+2022-05-18 00:15:39,513 INFO org.springframework.boot.SpringApplication [main] No active profile set, falling back to default profiles: default
+2022-05-18 00:15:40,046 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2022-05-18 00:15:40,112 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 63ms. Found 1 MongoDB repository interfaces.
+2022-05-18 00:15:40,463 INFO org.springframework.cloud.context.scope.GenericScope [main] BeanFactory id=3d5a5203-4538-3604-a9db-f1d943968eba
+2022-05-18 00:15:41,180 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat initialized with port(s): 8004 (http)
+2022-05-18 00:15:41,189 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing ProtocolHandler ["http-nio-8004"]
+2022-05-18 00:15:41,190 INFO org.apache.juli.logging.DirectJDKLog [main] Starting service [Tomcat]
+2022-05-18 00:15:41,190 INFO org.apache.juli.logging.DirectJDKLog [main] Starting Servlet engine: [Apache Tomcat/9.0.46]
+2022-05-18 00:15:41,328 INFO org.apache.juli.logging.DirectJDKLog [main] Initializing Spring embedded WebApplicationContext
+2022-05-18 00:15:41,329 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [main] Root WebApplicationContext: initialization completed in 1798 ms
+2022-05-18 00:15:41,832 INFO com.mongodb.diagnostics.logging.SLF4JLogger [main] Cluster created with settings {hosts=[localhost:27010], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms'}
+2022-05-18 00:15:41,873 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='628480fdc02b7c3708dc2432', description='null'}-localhost:27010] Opened connection [connectionId{localValue:1, serverValue:15}] to localhost:27010
+2022-05-18 00:15:41,882 INFO com.mongodb.diagnostics.logging.SLF4JLogger [cluster-ClusterId{value='628480fdc02b7c3708dc2432', description='null'}-localhost:27010] Monitor thread successfully connected to server with description ServerDescription{address=localhost:27010, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=4974300}
+2022-05-18 00:15:41,918 WARN org.springframework.data.convert.CustomConversions [main] Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-18 00:15:42,015 WARN org.springframework.data.convert.CustomConversions [main] Registering converter from class java.time.LocalDateTime to class org.joda.time.LocalDateTime as reading converter although it doesn't convert from a store-supported type! You might want to check your annotation setup at the converter implementation.
+2022-05-18 00:15:42,641 WARN com.netflix.config.sources.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2022-05-18 00:15:42,642 INFO com.netflix.config.sources.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-18 00:15:42,647 WARN com.netflix.config.sources.URLConfigurationSource [main] No URLs will be polled as dynamic configuration sources.
+2022-05-18 00:15:42,648 INFO com.netflix.config.sources.URLConfigurationSource [main] To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2022-05-18 00:15:42,870 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [main] Initializing ExecutorService 'applicationTaskExecutor'
+2022-05-18 00:15:44,144 INFO org.springframework.cloud.netflix.eureka.config.DiscoveryClientOptionalArgsConfiguration [main] Eureka HTTP Client uses Jersey
+2022-05-18 00:15:44,629 WARN org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration$BlockingLoadBalancerClientRibbonWarnLogger [main] You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2022-05-18 00:15:45,295 INFO org.springframework.cloud.netflix.eureka.InstanceInfoFactory [main] Setting initial instance status as: STARTING
+2022-05-18 00:15:45,435 INFO com.netflix.discovery.DiscoveryClient [main] Initializing Eureka in region us-east-1
+2022-05-18 00:15:45,655 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [main] Using JSON encoding codec LegacyJacksonJson
+2022-05-18 00:15:45,656 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [main] Using JSON decoding codec LegacyJacksonJson
+2022-05-18 00:15:45,802 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [main] Using XML encoding codec XStreamXml
+2022-05-18 00:15:45,803 INFO com.netflix.discovery.provider.DiscoveryJerseyProvider [main] Using XML decoding codec XStreamXml
+2022-05-18 00:15:45,957 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [main] Resolving eureka endpoints via configuration
+2022-05-18 00:15:46,246 INFO com.netflix.discovery.DiscoveryClient [main] Disable delta property : false
+2022-05-18 00:15:46,247 INFO com.netflix.discovery.DiscoveryClient [main] Single vip registry refresh property : null
+2022-05-18 00:15:46,248 INFO com.netflix.discovery.DiscoveryClient [main] Force full registry fetch : false
+2022-05-18 00:15:46,248 INFO com.netflix.discovery.DiscoveryClient [main] Application is null : false
+2022-05-18 00:15:46,249 INFO com.netflix.discovery.DiscoveryClient [main] Registered Applications size is zero : true
+2022-05-18 00:15:46,249 INFO com.netflix.discovery.DiscoveryClient [main] Application version is -1: true
+2022-05-18 00:15:46,250 INFO com.netflix.discovery.DiscoveryClient [main] Getting all instance registry info from the eureka server
+2022-05-18 00:15:46,348 INFO com.netflix.discovery.DiscoveryClient [main] The response status is 200
+2022-05-18 00:15:46,351 INFO com.netflix.discovery.DiscoveryClient [main] Starting heartbeat executor: renew interval is: 30
+2022-05-18 00:15:46,354 INFO com.netflix.discovery.InstanceInfoReplicator [main] InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-05-18 00:15:46,358 INFO com.netflix.discovery.DiscoveryClient [main] Discovery Client initialized at timestamp 1652850946357 with initial instances count: 4
+2022-05-18 00:15:46,368 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [main] Registering application ORDER-SERVICE with eureka with status UP
+2022-05-18 00:15:46,369 INFO com.netflix.discovery.DiscoveryClient$3 [main] Saw local status change event StatusChangeEvent [timestamp=1652850946369, current=UP, previous=STARTING]
+2022-05-18 00:15:46,373 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ORDER-SERVICE/DESKTOP-4JQFJ2O.mshome.net:order-service:8004: registering service...
+2022-05-18 00:15:46,373 INFO org.apache.juli.logging.DirectJDKLog [main] Starting ProtocolHandler ["http-nio-8004"]
+2022-05-18 00:15:46,406 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [main] Tomcat started on port(s): 8004 (http) with context path ''
+2022-05-18 00:15:46,410 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration [main] Updating port to 8004
+2022-05-18 00:15:46,438 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ORDER-SERVICE/DESKTOP-4JQFJ2O.mshome.net:order-service:8004 - registration status: 204
+2022-05-18 00:15:46,961 INFO org.springframework.boot.StartupInfoLogger [main] Started Application in 10.134 seconds (JVM running for 10.766)
+2022-05-18 00:15:50,852 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8004-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-05-18 00:15:50,853 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8004-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-05-18 00:15:50,869 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8004-exec-1] Completed initialization in 15 ms
+2022-05-18 00:15:51,372 INFO org.springdoc.api.AbstractOpenApiResource [http-nio-8004-exec-9] Init duration for springdoc-openapi is: 172 ms
+2022-05-18 00:20:46,264 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 00:25:46,281 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 00:30:46,295 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 00:35:46,314 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 00:39:54,218 INFO com.mongodb.diagnostics.logging.SLF4JLogger [http-nio-8004-exec-6] Opened connection [connectionId{localValue:2, serverValue:23}] to localhost:27010
+2022-05-18 00:39:54,255 INFO com.swa.application.service.OrderService [http-nio-8004-exec-6] Order(orderNumber=628486aac02b7c3708dc2433, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 00:40:46,319 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 00:41:56,173 INFO com.swa.application.service.OrderService [http-nio-8004-exec-9] Order(orderNumber=62848724c02b7c3708dc2434, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 00:45:25,245 INFO com.swa.application.service.OrderService [http-nio-8004-exec-3] Order(orderNumber=628487f5c02b7c3708dc2435, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 00:45:46,330 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 00:46:05,239 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8004-exec-6] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.swa.application.domain.OrderCustomerDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('com.swa.application.domain.OrderCustomerDto'); nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: Cannot construct instance of `com.swa.application.domain.OrderCustomerDto` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('com.swa.application.domain.OrderCustomerDto')
+ at [Source: (PushbackInputStream); line: 1, column: 1]]
+2022-05-18 00:48:25,269 INFO com.swa.application.service.OrderService [http-nio-8004-exec-7] Order(orderNumber=628488a9c02b7c3708dc2436, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 00:48:51,028 INFO com.swa.application.service.OrderService [http-nio-8004-exec-5] Order(orderNumber=628488c3c02b7c3708dc2437, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 00:48:51,314 INFO com.netflix.config.ChainedDynamicProperty$ChainLink [http-nio-8004-exec-2] Flipping property: customer-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-18 00:48:51,343 INFO com.netflix.util.concurrent.ShutdownEnabledTimer [http-nio-8004-exec-2] Shutdown hook installed for: NFLoadBalancer-PingTimer-customer-service
+2022-05-18 00:48:51,344 INFO com.netflix.loadbalancer.BaseLoadBalancer [http-nio-8004-exec-2] Client: customer-service instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=customer-service,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+2022-05-18 00:48:51,352 INFO com.netflix.loadbalancer.DynamicServerListLoadBalancer [http-nio-8004-exec-2] Using serverListUpdater PollingServerListUpdater
+2022-05-18 00:48:51,372 INFO com.netflix.config.ChainedDynamicProperty$ChainLink [http-nio-8004-exec-2] Flipping property: customer-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-18 00:48:51,374 INFO com.netflix.loadbalancer.DynamicServerListLoadBalancer [http-nio-8004-exec-2] DynamicServerListLoadBalancer for client customer-service initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=customer-service,current list of Servers=[DESKTOP-4JQFJ2O.mshome.net:8010],Load balancer stats=Zone stats: {defaultzone=[Zone:defaultzone;	Instance count:1;	Active connections count: 0;	Circuit breaker tripped count: 0;	Active connections per server: 0.0;]
+},Server stats: [[Server:DESKTOP-4JQFJ2O.mshome.net:8010;	Zone:defaultZone;	Total Requests:0;	Successive connection failure:0;	Total blackout seconds:0;	Last connection made:Wed Dec 31 18:00:00 CST 1969;	First connection made: Wed Dec 31 18:00:00 CST 1969;	Active Connections:0;	total failure count in last (1000) msecs:0;	average resp time:0.0;	90 percentile resp time:0.0;	95 percentile resp time:0.0;	min resp time:0.0;	max resp time:0.0;	stddev resp time:0.0]
+]}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@43644a93
+2022-05-18 00:48:51,463 INFO com.swa.application.service.OrderService [http-nio-8004-exec-2] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=628488c3c02b7c3708dc2437, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 00:48:52,360 INFO com.netflix.config.ChainedDynamicProperty$ChainLink [PollingServerListUpdater-0] Flipping property: customer-service.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+2022-05-18 00:49:55,383 WARN org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver [http-nio-8004-exec-6] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2022-05-18 00:50:46,337 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 00:51:24,916 INFO com.swa.application.service.OrderService [http-nio-8004-exec-8] Order(orderNumber=6284895cc02b7c3708dc2438, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 00:51:25,030 INFO com.swa.application.service.OrderService [http-nio-8004-exec-9] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=6284895cc02b7c3708dc2438, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 00:51:30,252 INFO com.swa.application.service.OrderService [http-nio-8004-exec-1] Order(orderNumber=6284895cc02b7c3708dc2438, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 00:51:30,254 INFO com.swa.application.integration.EventService [http-nio-8004-exec-1] Publish ORDER-PLACED topic
+2022-05-18 00:51:30,271 INFO org.apache.kafka.common.config.AbstractConfig [http-nio-8004-exec-1] ProducerConfig values: 
+	acks = 1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = default
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = false
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.class = class org.apache.kafka.clients.producer.internals.DefaultPartitioner
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.mechanism = GSSAPI
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2]
+	ssl.endpoint.identification.algorithm = https
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.2
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2022-05-18 00:51:30,325 INFO org.apache.kafka.common.utils.AppInfoParser$AppInfo [http-nio-8004-exec-1] Kafka version: 2.5.1
+2022-05-18 00:51:30,325 INFO org.apache.kafka.common.utils.AppInfoParser$AppInfo [http-nio-8004-exec-1] Kafka commitId: 0efa8fb0f4c73d92
+2022-05-18 00:51:30,326 INFO org.apache.kafka.common.utils.AppInfoParser$AppInfo [http-nio-8004-exec-1] Kafka startTimeMs: 1652853090323
+2022-05-18 00:51:30,515 INFO org.apache.kafka.clients.Metadata [kafka-producer-network-thread | producer-1] [Producer clientId=producer-1] Cluster ID: yVtTKKF1T0OFDZLLqn20jg
+2022-05-18 00:52:22,759 INFO com.swa.application.service.OrderService [http-nio-8004-exec-2] Order(orderNumber=62848996c02b7c3708dc2439, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 00:52:22,907 INFO com.swa.application.service.OrderService [http-nio-8004-exec-10] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=62848996c02b7c3708dc2439, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 00:52:22,946 INFO com.swa.application.service.OrderService [http-nio-8004-exec-4] Order(orderNumber=62848996c02b7c3708dc2439, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 00:52:22,949 INFO com.swa.application.integration.EventService [http-nio-8004-exec-4] Publish ORDER-PLACED topic
+2022-05-18 00:53:55,728 INFO com.swa.application.service.OrderService [http-nio-8004-exec-5] Order(orderNumber=628489f3c02b7c3708dc243a, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 00:53:55,834 INFO com.swa.application.service.OrderService [http-nio-8004-exec-2] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=628489f3c02b7c3708dc243a, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 00:53:55,855 INFO com.swa.application.service.OrderService [http-nio-8004-exec-10] Order(orderNumber=628489f3c02b7c3708dc243a, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 00:53:55,858 INFO com.swa.application.integration.EventService [http-nio-8004-exec-10] Publish ORDER-PLACED topic
+2022-05-18 00:55:46,351 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 00:58:24,177 INFO com.swa.application.service.OrderService [http-nio-8004-exec-7] Order(orderNumber=62848b00c02b7c3708dc243b, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 00:58:24,285 INFO com.swa.application.service.OrderService [http-nio-8004-exec-5] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=62848b00c02b7c3708dc243b, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 00:58:24,326 INFO com.swa.application.service.OrderService [http-nio-8004-exec-2] Order(orderNumber=62848b00c02b7c3708dc243b, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 00:58:24,327 INFO com.swa.application.integration.EventService [http-nio-8004-exec-2] Publish ORDER-PLACED topic
+2022-05-18 01:00:46,361 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 01:02:15,412 INFO com.swa.application.service.OrderService [http-nio-8004-exec-4] Order(orderNumber=62848be7c02b7c3708dc243c, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 01:02:15,568 INFO com.swa.application.service.OrderService [http-nio-8004-exec-7] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=62848be7c02b7c3708dc243c, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 01:02:15,598 INFO com.swa.application.service.OrderService [http-nio-8004-exec-5] Order(orderNumber=62848be7c02b7c3708dc243c, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 01:02:15,600 INFO com.swa.application.integration.EventService [http-nio-8004-exec-5] Publish ORDER-PLACED topic
+2022-05-18 01:05:46,371 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 01:10:45,173 INFO com.swa.application.service.OrderService [http-nio-8004-exec-10] Order(orderNumber=62848de5c02b7c3708dc243d, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 01:10:45,307 INFO com.swa.application.service.OrderService [http-nio-8004-exec-4] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=62848de5c02b7c3708dc243d, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 01:10:45,346 INFO com.swa.application.service.OrderService [http-nio-8004-exec-7] Order(orderNumber=62848de5c02b7c3708dc243d, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 01:10:45,348 INFO com.swa.application.integration.EventService [http-nio-8004-exec-7] Publish ORDER-PLACED topic
+2022-05-18 01:10:46,379 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 01:13:52,358 INFO com.swa.application.service.OrderService [http-nio-8004-exec-3] Order(orderNumber=62848ea0c02b7c3708dc243e, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 01:13:52,464 INFO com.swa.application.service.OrderService [http-nio-8004-exec-10] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=62848ea0c02b7c3708dc243e, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 01:13:52,487 INFO com.swa.application.service.OrderService [http-nio-8004-exec-4] Order(orderNumber=62848ea0c02b7c3708dc243e, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 01:13:52,488 INFO com.swa.application.integration.EventService [http-nio-8004-exec-4] Publish ORDER-PLACED topic
+2022-05-18 01:15:46,383 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 01:17:06,129 INFO com.swa.application.service.OrderService [http-nio-8004-exec-1] Order(orderNumber=62848f62c02b7c3708dc243f, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 01:17:06,263 INFO com.swa.application.service.OrderService [http-nio-8004-exec-3] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=62848f62c02b7c3708dc243f, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 01:17:06,283 INFO com.swa.application.service.OrderService [http-nio-8004-exec-10] Order(orderNumber=62848f62c02b7c3708dc243f, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 01:17:06,284 INFO com.swa.application.integration.EventService [http-nio-8004-exec-10] Publish ORDER-PLACED topic
+2022-05-18 01:17:59,912 INFO com.swa.application.service.OrderService [http-nio-8004-exec-4] Order(orderNumber=62848f97c02b7c3708dc2440, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 01:18:00,040 INFO com.swa.application.service.OrderService [http-nio-8004-exec-9] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=62848f97c02b7c3708dc2440, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 01:18:00,069 INFO com.swa.application.service.OrderService [http-nio-8004-exec-1] Order(orderNumber=62848f97c02b7c3708dc2440, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 01:18:00,070 INFO com.swa.application.integration.EventService [http-nio-8004-exec-1] Publish ORDER-PLACED topic
+2022-05-18 01:19:40,529 INFO com.swa.application.service.OrderService [http-nio-8004-exec-10] Order(orderNumber=62848ffcc02b7c3708dc2441, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 01:19:40,637 INFO com.swa.application.service.OrderService [http-nio-8004-exec-4] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=62848ffcc02b7c3708dc2441, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 01:19:40,660 INFO com.swa.application.service.OrderService [http-nio-8004-exec-9] Order(orderNumber=62848ffcc02b7c3708dc2441, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 01:19:40,662 INFO com.swa.application.integration.EventService [http-nio-8004-exec-9] Publish ORDER-PLACED topic
+2022-05-18 01:20:46,404 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 01:20:47,406 INFO com.swa.application.service.OrderService [http-nio-8004-exec-3] Order(orderNumber=6284903fc02b7c3708dc2442, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 01:20:47,510 INFO com.swa.application.service.OrderService [http-nio-8004-exec-10] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=6284903fc02b7c3708dc2442, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 01:20:47,549 INFO com.swa.application.service.OrderService [http-nio-8004-exec-4] Order(orderNumber=6284903fc02b7c3708dc2442, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 01:20:47,550 INFO com.swa.application.integration.EventService [http-nio-8004-exec-4] Publish ORDER-PLACED topic
+2022-05-18 01:21:07,087 INFO com.swa.application.service.OrderService [http-nio-8004-exec-9] Order(orderNumber=62849053c02b7c3708dc2443, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 01:21:07,202 INFO com.swa.application.service.OrderService [http-nio-8004-exec-1] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=62849053c02b7c3708dc2443, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 01:21:07,225 INFO com.swa.application.service.OrderService [http-nio-8004-exec-3] Order(orderNumber=62849053c02b7c3708dc2443, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 01:21:07,227 INFO com.swa.application.integration.EventService [http-nio-8004-exec-3] Publish ORDER-PLACED topic
+2022-05-18 01:21:43,192 INFO com.swa.application.service.OrderService [http-nio-8004-exec-10] Order(orderNumber=62849077c02b7c3708dc2444, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 01:21:43,310 INFO com.swa.application.service.OrderService [http-nio-8004-exec-4] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=62849077c02b7c3708dc2444, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 01:21:43,334 INFO com.swa.application.service.OrderService [http-nio-8004-exec-9] Order(orderNumber=62849077c02b7c3708dc2444, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 01:21:43,335 INFO com.swa.application.integration.EventService [http-nio-8004-exec-9] Publish ORDER-PLACED topic
+2022-05-18 01:21:58,134 INFO com.swa.application.service.OrderService [http-nio-8004-exec-1] Order(orderNumber=62849086c02b7c3708dc2445, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 01:21:58,237 INFO com.swa.application.service.OrderService [http-nio-8004-exec-3] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=62849086c02b7c3708dc2445, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 01:21:58,261 INFO com.swa.application.service.OrderService [http-nio-8004-exec-10] Order(orderNumber=62849086c02b7c3708dc2445, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 01:21:58,262 INFO com.swa.application.integration.EventService [http-nio-8004-exec-10] Publish ORDER-PLACED topic
+2022-05-18 01:22:44,016 INFO com.swa.application.service.OrderService [http-nio-8004-exec-4] Order(orderNumber=628490b4c02b7c3708dc2446, customerID=null, customer=null, orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED) prepared.
+2022-05-18 01:22:44,132 INFO com.swa.application.service.OrderService [http-nio-8004-exec-9] Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)) added to Order(orderNumber=628490b4c02b7c3708dc2446, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=CREATED)
+2022-05-18 01:22:44,155 INFO com.swa.application.service.OrderService [http-nio-8004-exec-1] Order(orderNumber=628490b4c02b7c3708dc2446, customerID=customer1, customer=Customer(customerId=customer1, firstName=Kemal, lastName=Abdella, phone=641 248 1243, email=kemal.abdella@gmail.com, address=Address(street=1000 street, city=Fairfield, zip=52557)), orderLines=[OrderLine(product=Product(productNumber=1, price=0.0), quantity=5)], orderStatus=PLACED) placed!
+2022-05-18 01:22:44,156 INFO com.swa.application.integration.EventService [http-nio-8004-exec-1] Publish ORDER-PLACED topic
+2022-05-18 01:25:46,415 INFO com.netflix.discovery.shared.resolver.aws.ConfigClusterResolver [AsyncResolver-bootstrap-executor-0] Resolving eureka endpoints via configuration
+2022-05-18 01:25:56,442 INFO com.netflix.loadbalancer.PollingServerListUpdater$LazyHolder$2 [Thread-8] Shutting down the Executor Pool for PollingServerListUpdater
+2022-05-18 01:25:56,444 INFO org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry [SpringContextShutdownHook] Unregistering application ORDER-SERVICE with eureka with status DOWN
+2022-05-18 01:25:56,445 WARN com.netflix.discovery.DiscoveryClient$3 [SpringContextShutdownHook] Saw local status change event StatusChangeEvent [timestamp=1652855156445, current=DOWN, previous=UP]
+2022-05-18 01:25:56,446 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ORDER-SERVICE/DESKTOP-4JQFJ2O.mshome.net:order-service:8004: registering service...
+2022-05-18 01:25:56,456 INFO com.netflix.discovery.DiscoveryClient [DiscoveryClient-InstanceInfoReplicator-0] DiscoveryClient_ORDER-SERVICE/DESKTOP-4JQFJ2O.mshome.net:order-service:8004 - registration status: 204
+2022-05-18 01:25:56,784 INFO org.springframework.scheduling.concurrent.ExecutorConfigurationSupport [SpringContextShutdownHook] Shutting down ExecutorService 'applicationTaskExecutor'
+2022-05-18 01:25:56,803 INFO org.apache.kafka.clients.producer.KafkaProducer [SpringContextShutdownHook] [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2022-05-18 01:25:56,817 INFO com.mongodb.diagnostics.logging.SLF4JLogger [SpringContextShutdownHook] Closed connection [connectionId{localValue:2, serverValue:23}] to localhost:27010 because the pool has been closed.
+2022-05-18 01:25:57,560 INFO com.netflix.util.concurrent.ShutdownEnabledTimer [SpringContextShutdownHook] Shutdown hook removed for: NFLoadBalancer-PingTimer-customer-service
+2022-05-18 01:25:57,569 INFO com.netflix.util.concurrent.ShutdownEnabledTimer [SpringContextShutdownHook] Exception caught (might be ok if at shutdown)
+java.lang.IllegalStateException: Shutdown in progress
+	at java.base/java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
+	at java.base/java.lang.Runtime.removeShutdownHook(Runtime.java:241)
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632)
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883)
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:280)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:214)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1092)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1085)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1061)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:979)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:199)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:587)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:559)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1092)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:520)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1085)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1061)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1030)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.doClose(ServletWebServerApplicationContext.java:170)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:949)
+2022-05-18 01:25:57,579 INFO com.netflix.discovery.DiscoveryClient [SpringContextShutdownHook] Shutting down DiscoveryClient ...
+2022-05-18 01:26:00,585 INFO com.netflix.discovery.DiscoveryClient [SpringContextShutdownHook] Unregistering ...
+2022-05-18 01:26:00,600 INFO com.netflix.discovery.DiscoveryClient [SpringContextShutdownHook] DiscoveryClient_ORDER-SERVICE/DESKTOP-4JQFJ2O.mshome.net:order-service:8004 - deregister  status: 200
+2022-05-18 01:26:00,613 INFO com.netflix.discovery.DiscoveryClient [SpringContextShutdownHook] Completed shut down of DiscoveryClient

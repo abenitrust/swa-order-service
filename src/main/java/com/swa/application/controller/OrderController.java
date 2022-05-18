@@ -1,5 +1,7 @@
 package com.swa.application.controller;
 
+import com.swa.application.domain.OrderCustomerDto;
+import com.swa.application.domain.ShoppingCart;
 import com.swa.application.service.OrderService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -14,7 +16,7 @@ import com.swa.application.domain.Order;
 public class OrderController {
 	@Autowired
 	private OrderService orderService;
-	private static final Logger log = LoggerFactory.getLogger(OrderController.class);
+	private static final Logger logger = LoggerFactory.getLogger(OrderController.class);
 
 
 	@GetMapping("/{orderNumber}")
@@ -26,15 +28,34 @@ public class OrderController {
 		}
 	}
 
-//	@PostMapping
-//	public ResponseEntity<?> add(@RequestBody Order order) {
-//		try {
-//			orderService.add(order);
-//			return new ResponseEntity<>("Success!", HttpStatus.OK);
-//		} catch (Exception e) {
-//			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
-//		}
-//	}
+	@PostMapping("/add-customer")
+	public ResponseEntity<?> addCustomer(@RequestBody OrderCustomerDto orderCustomer) {
+		try {
+			orderService.addCustomer(orderCustomer);
+			return new ResponseEntity<>("Success!", HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		}
+	}
+
+	@PostMapping("/place/{orderNumber}")
+	public ResponseEntity<?> place(@PathVariable String orderNumber) {
+		try {
+			orderService.place(orderNumber);
+			return new ResponseEntity<>("Success!", HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		}
+	}
+
+	@PostMapping("/prepare")
+	public ResponseEntity<?> prepare(@RequestBody ShoppingCart cart) {
+		try {
+			return new ResponseEntity<>(orderService.prepare(cart), HttpStatus.OK);
+		} catch (Exception e) {
+			return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
+		}
+	}
 
 	@GetMapping
 	public ResponseEntity<?> findAll() {

@@ -10,6 +10,5 @@ import java.util.List;
 @ToString
 public class ShoppingCart {
     private String shoppingCartNumber;
-    private String customerID;
 	private List<CartLine> cartLines;
 }
