@@ -1,5 +1,7 @@
 package com.swa.application.service;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import com.swa.application.domain.*;
 import com.swa.application.exception.DBException;
 import com.swa.application.integration.EmailService;
@@ -75,7 +77,10 @@ public class OrderService {
 	public void addCustomer(OrderCustomerDto orderCustomerDto) throws DBException {
 		try {
 			var order = findById(orderCustomerDto.getOrderNumber());
-			Customer customer = customerFeignClient.getCustomer(orderCustomerDto.getCustomerNumber());
+			Customer customer = getCustomer(orderCustomerDto.getCustomerNumber());
+			if(customer == null) {
+				throw new DBException("Customer with number " +  orderCustomerDto.getOrderNumber() + " not found!");
+			}
 			order.setCustomer(customer);
 			order.setCustomerID(customer.getCustomerId());
 			orderRepository.save(order);
@@ -123,6 +128,17 @@ public class OrderService {
 		} catch (Exception e) {
 			throw new DBException(e.getMessage());
 		}
+	}
+
+	@HystrixCommand(fallbackMethod = "getCustomerFallback", commandProperties = {
+			@HystrixProperty(name="execution.isolation.thread.timeoutInMilliseconds", value="5000")
+	})
+	public Customer getCustomer(String customerNumber) {
+		return customerFeignClient.getCustomer(customerNumber);
+	}
+
+	public Customer getCustomerFallback() {
+		return null;
 	}
 
 	@FeignClient("customer-service")
